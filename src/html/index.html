@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 唱片图片 -->
+        <div class="songImg">
+            <img src="../source/song_1.jpg" alt="">
+        </div>
+
+        <!-- 歌曲名字，作者，专辑 -->
+        <div class="songInfo">
+            <h2 class="name">听妈妈的话</h2>
+            <div class="singer">周杰伦</div>
+            <div class="album">依然范特西</div>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="progress">
+            <div class="currentTime"><span>00</span>:<span>00</span></div>
+
+            <div class="drag">
+                <div class="circle"></div>
+                <div class="frontBg"></div>
+                <div class="backBg"></div>
+            </div>
+
+            <div class="totalTime"><span class="minute">00</span>:<span class="second">00</span></div>
+        </div>
+
+        <!-- 底边切歌栏 -->
+        <ul class="control">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- 歌曲遮罩层JS动态创建 -->
+        <div class="mask">
+            <dl>
+                <dt>播放列表</dt>
+                <!-- <dd>听妈妈的话</dd>
+                <dd>野狼Disco</dd>
+                <dd>我和我的祖国</dd>
+                <dd>好运来</dd> -->
+            </dl>
+            <div class="close">关闭</div>
+        </div>
+
+
+
+    </div>
+    <!-- 主要是用里面的ajax -->
+    <script src="../js/zepto.min.js"></script>
+    <!-- 高斯模糊 -->
+    <script src="../js/gaussBlur.js"></script>
+    <!-- 渲染页面 -->
+    <script src="../js/render.js"></script>
+    <!-- 加载音乐 -->
+    <script src="../js/audio.js"></script>
+    <!-- 加载切换歌曲模块 -->
+    <script src="../js/toggle.js"></script>
+    <!-- 歌曲列表 -->
+    <script src="../js/mask.js"></script>
+    <!-- 主文件 -->
+    <script src="../js/index.js"></script>
+
+</body>
+</html>

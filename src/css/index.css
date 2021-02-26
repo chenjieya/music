@@ -1,0 +1,162 @@
+body,
+dd,
+dl,
+h2 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-size: cover;
+}
+/* wrapper */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 15vw;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* 唱片图片 */
+  /* 歌曲名字，作者，专辑 */
+  /* 底边切歌栏 */
+}
+.wrapper .songImg {
+  width: 70vw;
+  height: 70vw;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .songImg img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+.wrapper .songInfo {
+  height: 20vh;
+  margin-top: 6vw;
+  text-align: center;
+  color: #ffffff;
+}
+.wrapper .songInfo h2 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 3vw;
+}
+.wrapper .songInfo div {
+  font-size: 14px;
+}
+.wrapper .progress {
+  height: 8vw;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 8vw;
+  display: flex;
+}
+.wrapper .progress .currentTime {
+  padding: 0 4vw;
+}
+.wrapper .progress .drag {
+  height: 8vw;
+  flex: 1 1 auto;
+  position: relative;
+}
+.wrapper .progress .drag .circle {
+  width: 2vw;
+  height: 2vw;
+  border: 2vw solid rgba(0, 255, 255, 0);
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -3vw;
+  margin-top: -3vw;
+}
+.wrapper .progress .drag .frontBg,
+.wrapper .progress .drag .backBg {
+  height: 0.6vw;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.3vw;
+}
+.wrapper .progress .drag .backBg {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.wrapper .progress .totalTime {
+  padding: 0 4vw;
+}
+.wrapper .control {
+  width: 100vw;
+  height: 16vw;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.wrapper .control li {
+  width: 20%;
+}
+.wrapper .control li:nth-child(1) {
+  background: url(../images/icon-like.png) no-repeat center / 30%;
+}
+.wrapper .control li:nth-child(1).liking {
+  background-image: url(../images/icon-like-solid.png);
+}
+.wrapper .control li:nth-child(2) {
+  background: url(../images/icon-prev.png) no-repeat center / 30%;
+}
+.wrapper .control li:nth-child(3) {
+  background: url(../images/icon-play.png) no-repeat center / 30%;
+}
+.wrapper .control li:nth-child(3).playing {
+  background-image: url(../images/icon-pause.png);
+}
+.wrapper .control li:nth-child(4) {
+  background: url(../images/icon-next.png) no-repeat center / 30%;
+}
+.wrapper .control li:nth-child(5) {
+  background: url(../images/icon-list.png) no-repeat center / 30%;
+}
+.wrapper .control li:nth-child(5).active {
+  background-image: url(../images/icon-playlist.png);
+}
+.wrapper .mask {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(#050505, rgba(170, 170, 170, 0.95));
+  transform: translateY(100%);
+  z-index: 4;
+}
+.wrapper .mask dt,
+.wrapper .mask dd,
+.wrapper .mask .close {
+  height: 12vw;
+  line-height: 12vw;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wrapper .mask dt,
+.wrapper .mask .close {
+  text-align: center;
+}
+.wrapper .mask dd {
+  padding-left: 3vw;
+}
+.wrapper .mask dd.activeColor {
+  color: #56b287;
+}
+.wrapper .mask .close {
+  border-bottom: none;
+}

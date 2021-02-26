@@ -1,0 +1,173 @@
+body,dd,dl,h2{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-size: cover;
+}
+
+/* wrapper */
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 15vw;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.2);
+    /* 唱片图片 */
+    .songImg{
+        width: 70vw;
+        height: 70vw;
+        margin: 0 auto;
+        background-color: #000;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
+    }
+    /* 歌曲名字，作者，专辑 */
+    .songInfo{
+        height: 20vh;
+        margin-top: 6vw;
+        text-align: center;
+        color: #ffffff;
+        h2{
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 3vw;
+        }
+        div{
+            font-size: 14px;
+        }
+    }
+
+    .progress{  
+        height: 8vw;
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 8vw;
+
+        display: flex;
+
+        .currentTime{
+            padding: 0 4vw;
+        }
+        .drag{
+            height: 8vw;
+            flex: 1 1 auto;
+            position: relative;
+            .circle{
+                width: 2vw;
+                height: 2vw;
+                border: 2vw solid rgba(0, 255, 255,0);
+                background-color: #fff;
+                background-clip: padding-box;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 50%;
+                left: -3vw;
+                margin-top: -3vw;
+            }
+            .frontBg,.backBg{
+                height: 0.6vw;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -.3vw;
+            }
+            .backBg{
+                width: 100%;
+                background-color: rgba(255, 255, 255, .3);
+            }
+        }
+        .totalTime{
+            padding: 0 4vw;
+        }
+    }
+
+    /* 底边切歌栏 */
+    .control{
+        width: 100vw;
+        height: 16vw;
+        position: fixed;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+
+        display: flex;
+        li{
+            width: 20%;
+            &:nth-child(1){
+                &.liking{
+                    background-image: url(../images/icon-like-solid.png);
+                }
+                background: url(../images/icon-like.png) no-repeat center/30%;
+            }
+            &:nth-child(2){
+                background: url(../images/icon-prev.png) no-repeat center/30%;
+            }
+            &:nth-child(3){
+                &.playing{
+                    background-image: url(../images/icon-pause.png);
+                }
+                background: url(../images/icon-play.png) no-repeat center/30%;
+            }
+            &:nth-child(4){
+                background: url(../images/icon-next.png) no-repeat center/30%;
+            }
+            &:nth-child(5){
+                &.active{
+                    background-image: url(../images/icon-playlist.png);
+                }
+                background: url(../images/icon-list.png) no-repeat center/30%;
+            }
+        }
+        
+        
+        
+        
+    }
+
+    .mask{
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        background: linear-gradient(#050505,rgba(170,170,170,.95));
+        transform: translateY(100%);
+        z-index: 4;
+
+        dt,dd,.close{
+            height: 12vw;
+            line-height: 12vw;
+            font-size: 16px;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+        dt,.close{
+            text-align: center;
+        }
+        
+        dd{
+            &.activeColor{
+                color: #56b287;
+            }
+            padding-left: 3vw;
+        }
+        .close{
+            border-bottom: none;
+        }
+        
+    }
+
+
+}
